@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import streamRoutes from './routes/stream';
+import { startMediaServer } from './mediaServer';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -16,7 +17,7 @@ app.use('/api/stream', streamRoutes);
 app.get('/', (req, res) => {
   res.send('Cue Stream backend is running');
 });
-
+startMediaServer();
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
