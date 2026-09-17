@@ -3,7 +3,7 @@ import Hls from 'hls.js';
 import Scoreboard from './Scoreboard';
 import './App.css';
 
-const BACKEND_URL = 'http://localhost:3001';
+const BACKEND_URL = 'https://cue-stream-app-production.up.railway.app';
 
 function App() {
   const [rtspUrl, setRtspUrl] = useState('');
